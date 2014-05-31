@@ -1,3 +1,9 @@
+<style>
+body
+{
+	margin:50px;
+}
+</style>
 <pre>
 <?php require_once("header.php") ?>
 <form style="margin:0">

@@ -14,7 +14,7 @@
 
 <div id="header">
 	<div class="header_c">
-		<a href="wifi.php"><img src="img/buatanmalaysia.png" style="float:right;height:40px;margin-top:5px;margin-left:10px"></a><img src="img/srp.png" style="float:left"><div class="company_name">1MINING TECH</div>
+		<a href="wifi.php"><img src="img/buatanmalaysia.png" style="float:right;height:40px;margin-top:5px;margin-left:10px"></a><img src="/img/srp-miner-logo.png" style="float:left"><div class="company_name">1MINING TECH</div>
 	</div>
 </div>
 
@@ -35,10 +35,10 @@
 
 <div id="temptable">
 <table width="100%" cellpadding="0" cellspacing="0" height="60px" border=1>
-	<td align="center" class="temp"><span class="temp" id="am1_temp1">...&#x2103;</span> / <span class="temp" id="am1_temp2">...&#x2103;</span></td>
-	<td align="center" class="temp"><span class="temp" id="am2_temp1">...&#x2103;</span> / <span class="temp" id="am2_temp2">...&#x2103;</span></td>
-	<td align="center" class="temp"><span class="temp" id="am3_temp1">...&#x2103;</span> / <span class="temp" id="am3_temp2">...&#x2103;</span></td>
-	<td align="center" class="temp"><span class="temp" id="am4_temp1">...&#x2103;</span> / <span class="temp" id="am4_temp2">...&#x2103;</span></td>	
+	<td align="center" class="temp"><span class="temp" id="am1_temp1">...&#x2103;</span></td>
+	<td align="center" class="temp"><span class="temp" id="am2_temp1">...&#x2103;</span></td>
+	<td align="center" class="temp"><span class="temp" id="am3_temp1">...&#x2103;</span></td>
+	<td align="center" class="temp"><span class="temp" id="am4_temp1">...&#x2103;</span></td>	
 </table>
 </div>
 
@@ -118,6 +118,19 @@ function update()
 		*/
 		$("#accepted").html(Number(data["ASC0"]["Accepted"])+Number(data["ASC1"]["Accepted"])+Number(data["ASC2"]["Accepted"])+Number(data["ASC3"]["Accepted"]));
 		$("#rejected").html(Number(data["ASC0"]["Rejected"])+Number(data["ASC1"]["Rejected"])+Number(data["ASC2"]["Rejected"])+Number(data["ASC3"]["Rejected"]));
+	});
+
+	$.getJSON("http://srp-miner/temp.php",function(data)
+	{
+		temp1 = data["1"];
+		temp2 = data["2"];
+		temp3 = data["3"];
+		temp4 = data["4"];
+
+		$("#am1_temp1").html(temp1+' &#x2103;');
+		$("#am2_temp1").html(temp2+' &#x2103;');
+		$("#am3_temp1").html(temp3+' &#x2103;');
+		$("#am4_temp1").html(temp4+' &#x2103;');
 	});
 }
 

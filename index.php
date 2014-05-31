@@ -1,4 +1,6 @@
-<a href="/dashboard/wifi.php">wifi</a> | <a href="/dashboard">dashboard</a>
+<pre>
+<a href="/index.php">settings</a> | <a href="/dashboard/wifi.php">wifi</a> | <a href="/dashboard">dashboard</a>
+</pre>
 <?php
 function cg_status() {	
 	system("sudo ps -U root | grep -c cgminer > php.log",$ret_val);
@@ -309,11 +311,10 @@ else{
 			}
 		#header {		
 			height:100px;
-			width:80%;
+			
 			margin:auto;
 				}
-		#main{
-			width:80%;
+		#main{			
 			height:300px;
                         margin-top:5px;
 			margin-left:auto;
@@ -334,7 +335,7 @@ else{
 			text-align:center;
 		}
 		#log	{
-			margin-left:60px;
+			
 			}
 		#menu { margin-top:0px;margin-left:200px; border:0px;  height:26px; }
 		#menu ul {width:200px; list-style: none; margin: 0px; padding: 0px;float:right; }
@@ -350,6 +351,7 @@ else{
 			margin-right: 0px;
 			margin-bottom: 0px;
 			background-color:#FFF;
+			margin:50px;
 			}
 	</style>
 </head>
@@ -358,9 +360,9 @@ else{
 
 <div id="header">
 	<div id="img">
-	<a " href="http://www.lketc.com/"><img src="lklogo.JPG"  alt="龙矿科技" width="150" height="90" style="border:none"></a>
+	<img src="/img/srp-miner-logo.png"style="border:none" height="100"></a>
 	</div>
-	<div id="menu">
+	<div id="menu" style="display:none">
    		 <ul>
 		<li><a href="index.php">中文</a></li>
 		<li><a href="index-en.php">English</a></li>
@@ -369,7 +371,7 @@ else{
 </div>
 <div id="main">
 <div id="pool">
-	<form action="" method="post" style="margin-left:60px">
+	<form action="" method="post" style="">
 		IP Address: <input style="color:blue" type="text" name="ip" size="10" value=<?php echo $ip ?> />
 		Net mask: <input style="color:blue" type="text" name="netmask" size="10" value=<?php echo $netmask ?> />
 		Gateway: <input style="color:blue" type="text" name="gateway" size="10" value=<?php echo $gateway ?> />
@@ -381,7 +383,7 @@ else{
 
 
 <div id="pool">
-	<form action="" method="post" style="margin-left:60px">
+	<form action="" method="post" style="">
 		Pool 1 Add : <input style="color:blue" type="text" name="pool1" size="33" value=<?php echo $pool1 ?> />
 		Pool 1 User: <input style="color:blue" type="text" name="id1" size="10" value=<?php echo $id1 ?> />
 		Pool 1 Pass: <input style="color:blue" type="text" name="pwd1" size="10" value=<?php echo $pwd1 ?> /> <br \>
@@ -423,7 +425,7 @@ else{
 
 <div id="status">
 	<br \>
-	<form action="./miner.php" target="_blank" method="post" style="margin-left:60px">
+	<form action="./miner.php" target="_blank" method="post" style="">
 		Status:<font color=<?php echo $cg_status_color?>> <?php echo $cg_status_info?> </font> <input type="submit" value="Real-time monitoring" />
 	</form>
 
