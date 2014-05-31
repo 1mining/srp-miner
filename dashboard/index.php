@@ -120,7 +120,7 @@ function update()
 		$("#rejected").html(Number(data["ASC0"]["Rejected"])+Number(data["ASC1"]["Rejected"])+Number(data["ASC2"]["Rejected"])+Number(data["ASC3"]["Rejected"]));
 	});
 
-	$.getJSON("http://srp-miner/temp.php",function(data)
+	$.getJSON("http://localhost/temp.php",function(data)
 	{
 		temp1 = data["1"];
 		temp2 = data["2"];
