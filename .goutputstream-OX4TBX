@@ -1,0 +1,13 @@
+#! /bin/bash
+str=""
+i=0
+ 
+while read line 
+
+do
+    str[$i]=$line
+    echo ${str[$i]}
+    i=$(expr $i + 1)
+done < user.log
+
+sudo ./cgminer -o $str[$0] -u $str[$1] -p $str[$2] --api-listen --cs 8 --stmcu 0 

@@ -1,0 +1,1 @@
+<a href="index.php">home</a> | <a href="wifi.php">wifi</a> | <a href="/index.php">miner</a>

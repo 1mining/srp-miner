@@ -1,0 +1,12 @@
+#!/bin/sh
+infofile=user.log
+cgminefile=cgminer
+# Òª×¢ÒâÂ·¾¶cgminer.log
+#./cgminer
+cd /var/www
+#if  [ -f $infofile ] ;then
+#	if [ -x $cgminefile ] ;then
+#		awk  '{line_x[x++] = $0}; END{sudo source cgminer -o line_x[0] -u line_x[1] -p line_x[2] -o line_x[3] -u line_x[4] -p #line_x[5] -o line_x[6] -u line_x[7] -p line_x[8] --api-listen --cs 8 --stmcu 0 > cgminer.log &"}' $infofile 
+#	fi
+#fi
+
