@@ -14,7 +14,7 @@
 
 <div id="header">
 	<div class="header_c">
-		<a href="wifi.php"><img src="img/buatanmalaysia.png" style="float:right;height:40px;margin-top:5px;margin-left:10px"></a><img src="/img/srp-miner-logo.png" style="float:left"><div class="company_name">1MINING TECH</div>
+		<?php echo exec('/home/pi/whatismyip') ?> <a href="wifi.php"><img src="img/buatanmalaysia.png" style="float:right;height:40px;margin-top:5px;margin-left:10px"></a><img src="/img/srp-miner-logo.png" style="float:left"><div class="company_name">1MINING TECH</div>
 	</div>
 </div>
 
