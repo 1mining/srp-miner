@@ -1,5 +1,5 @@
 <?php
-$html = file_get_contents("http://192.168.1.170/miner.php?ref=0&pg=Stats");
+$html = file_get_contents("http://localhost/miner.php?ref=0&pg=Stats");
 $explode = explode('BA10',$html);
 
 $explode = explode('align=right>',$html);
