@@ -119,3 +119,7 @@ print_r($response); echo "\n";
 endif;
 ?>
 <input type="submit" value="Reconnect" onclick="window.location=('reconnect.php')"><input type="submit" value="Reboot" onclick="window.location=('reboot.php')">
+<br/>
+<?php $connected = exec('/home/pi/whatismyip') ?>
+WIFI Status: <?php if($connected) echo $connected; else echo "Not Connected - Try Rebooting"; ?>
+
