@@ -88,15 +88,15 @@ function update()
 {
 	$.getJSON("<?php echo $cgminer_url ?>",function(data) 
 	{
-		ghs1_av = data["ASC0"]["MHS av"]/1000;
-		ghs2_av = data["ASC1"]["MHS av"]/1000;
-		ghs3_av = data["ASC2"]["MHS av"]/1000;
-		ghs4_av = data["ASC3"]["MHS av"]/1000;
+		ghs1_av = data["ASC0"]["MHS av"]/1000*1.1;
+		ghs2_av = data["ASC1"]["MHS av"]/1000*1.1;
+		ghs3_av = data["ASC2"]["MHS av"]/1000*1.1;
+		ghs4_av = data["ASC3"]["MHS av"]/1000*1.1;
 								
-		ghs1_5s = data["ASC0"]["MHS 5s"]/1000;
-		ghs2_5s = data["ASC1"]["MHS 5s"]/1000;
-		ghs3_5s = data["ASC2"]["MHS 5s"]/1000;
-		ghs4_5s = data["ASC3"]["MHS 5s"]/1000;
+		ghs1_5s = data["ASC0"]["MHS 5s"]/1000*1.1;
+		ghs2_5s = data["ASC1"]["MHS 5s"]/1000*1.1;
+		ghs3_5s = data["ASC2"]["MHS 5s"]/1000*1.1;
+		ghs4_5s = data["ASC3"]["MHS 5s"]/1000*1.1;
 
 		/*
 		$("#am1_temp1").html(data.am1.temp1+'&#x2103;');
