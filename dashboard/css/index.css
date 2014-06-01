@@ -33,7 +33,7 @@ body
 .scale
 {
 	transform: scale(1); 
-	-webkit-transform: scale(0.8); 
+	-webkit-transform: scale(1); 
 	-webkit-transform-origin: 0 0; 
 	-moz-transform: scale(1); 
 	-moz-transform-origin: 0 0; 
