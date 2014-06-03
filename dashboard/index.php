@@ -137,13 +137,13 @@ function update()
 $( document ).ready(function() {
 	//start
 	update();
-	setInterval("update()",2500);
+	setInterval("update()",10000);
 
 	gauge1.init();
 	gauge2.init(); 
 	gauge3.init(); 
 	gauge4.init(); 	
-	setInterval("plusMinus()",250);
+	setInterval("plusMinus()",1000);
 	//end
 });
 </script>
