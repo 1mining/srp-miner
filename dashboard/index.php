@@ -137,7 +137,7 @@ function update()
 $( document ).ready(function() {
 	//start
 	update();
-	setInterval("update()",30000);
+	setInterval("update()",40000);
 
 	gauge1.init();
 	gauge2.init(); 
